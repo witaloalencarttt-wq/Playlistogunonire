@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Playlist da Curimba</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <section id="login-screen" class="login-screen">
+      <div class="brand">
+        <span class="brand-icon">▶</span>
+        <span>PLAYLIST<span class="accent">ÒGÚNONIRE</span></span>
+      </div>
+
+      <div class="login-card">
+        <p class="eyebrow">COMUNIDADE ÒGÚN ONIRÉ</p>
+        <h1>Playlists dos pontos da comunidade.</h1>
+        <p class="muted">Digite a senha para acessar suas playlists.</p>
+
+        <form id="login-form">
+          <label for="password">Senha de acesso</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Digite sua senha"
+            autocomplete="current-password"
+            required
+          >
+          <button type="submit">Entrar <span>→</span></button>
+          <p id="login-error" class="error" role="alert"></p>
+        </form>
+      </div>
+
+      <p class="footer-note">CURIMBA ÒGÚN ONIRE - 2026.</p>
+    </section>
+
+    <section id="app-screen" class="app-screen hidden">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-icon">▶</span>
+          <span>PLAYLIST<span class="accent">ÒGÚNONIRE</span></span>
+        </div>
+        <button id="logout-button" class="logout-button">
+          Sair ↗
+        </button>
+      </header>
+
+      <div class="content">
+        <p class="eyebrow">NOSSA COLEÇÃO</p>
+        <h1>Qual é a gira dessa semana?</h1>
+        <p class="muted">Escolha uma categoria e dê o play.</p>
+
+        <nav id="category-list" class="category-list"
+          aria-label="Categorias de playlists"></nav>
+
+        <div id="playlist-list" class="playlist-list"></div>
+
+        <section id="player-section" class="player-section hidden">
+          <div class="player-heading">
+            <div>
+              <p class="eyebrow">NOW PLAYING</p>
+              <h2 id="player-title">Sua playlist</h2>
+            </div>
+            <button id="close-player" class="close-button">
+              Fechar ✕
+            </button>
+          </div>
+          <div class="player-frame">
+            <iframe
+              id="youtube-player"
+              title="Player de playlist do YouTube"
+              src="about:blank"
+              allow="autoplay; encrypted-media; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

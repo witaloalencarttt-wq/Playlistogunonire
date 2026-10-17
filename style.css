@@ -1,0 +1,287 @@
+
+:root {
+  --background: #101010;
+  --surface: #191919;
+  --surface-hover: #242424;
+  --text: #f5f5f5;
+  --muted: #999999;
+  --accent: #1a73e8;
+  --border: #303030;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.login-screen {
+  min-height: 100vh;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  background: var(--accent);
+  border-radius: 10px;
+  color: white;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  margin-top: 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(27px, 5vw, 40px);
+  letter-spacing: -1.4px;
+  line-height: 1.12;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  margin: 26px 0 10px;
+  font-size: 13px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  color: var(--text);
+  background: #101010;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+#login-form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+}
+
+#login-form button span {
+  float: right;
+}
+
+.error {
+  color: #ff7777;
+  font-size: 13px;
+  min-height: 16px;
+}
+
+.footer-note {
+  margin-top: 36px;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 5%;
+  border-bottom: 1px solid var(--border);
+}
+
+.logout-button, .close-button {
+  padding: 10px 14px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+.content {
+  width: min(1100px, 90%);
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin-bottom: 8px;
+}
+
+.category-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.category-button {
+  padding: 11px 17px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.category-button.active,
+.category-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.playlist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.playlist-card {
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.playlist-card:hover {
+  transform: translateY(-4px);
+  background: var(--surface-hover);
+}
+
+.playlist-cover {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 70% 20%, #642020, transparent 40%),
+    linear-gradient(135deg, #292929, #111111);
+  font-size: 40px;
+}
+
+.playlist-card h3 {
+  margin: 16px 4px 6px;
+}
+
+.playlist-card p {
+  margin: 0 4px 15px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.play-button {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: var(--accent);
+  font-weight: bold;
+}
+
+.player-section {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.player-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.player-heading h2 {
+  margin: 8px 0;
+}
+
+.player-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.player-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 25px;
+  }
+
+  .content {
+    margin-top: 30px;
+  }
+
+  .player-heading {
+    align-items: flex-start;
+  }
+}
